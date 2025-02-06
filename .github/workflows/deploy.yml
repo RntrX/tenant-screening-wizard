@@ -3,10 +3,10 @@ name: Deploy Tenant Screening Wizard
 on:
   push:
     branches:
-      - main  # Runs on code pushed to the main branch
+      - main
   pull_request:
     branches:
-      - main  # Runs checks on pull requests
+      - main
 
 jobs:
   build-and-test:
@@ -37,6 +37,9 @@ jobs:
 
       - name: Install Dependencies
         run: npm install
+
+      - name: Install Vercel CLI
+        run: npm install -g vercel@latest  # Ensures latest Vercel CLI is installed
 
       - name: Deploy to Vercel
         uses: amondnet/vercel-action@v25
