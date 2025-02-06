@@ -11,7 +11,6 @@ on:
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
@@ -24,13 +23,12 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      - name: Build Project (Skip Lint Errors)
-        run: npm run build || true  # Ignores build failures and continues
+      - name: Build Project
+        run: npm run build || true  # Ignores build failures
 
   deploy:
     needs: build-and-test
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
@@ -39,12 +37,7 @@ jobs:
         run: npm install
 
       - name: Install Vercel CLI
-        run: npm install -g vercel@latest  # Ensures latest Vercel CLI is installed
+        run: npm install -g vercel@latest
 
       - name: Deploy to Vercel
-        uses: amondnet/vercel-action@v25
-        with:
-          vercel-token: ${{ secrets.VERCEL_TOKEN }}
-          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
-          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
-          vercel-args: "--prod"
+        run: vercel --prod --token ${{ secrets.VERCEL_TOKEN }}
