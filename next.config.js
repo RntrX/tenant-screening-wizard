@@ -2,10 +2,13 @@
 const nextConfig = {
   reactStrictMode: true,
   eslint: {
-    ignoreDuringBuilds: true, // 🚀 Skips linting in build
+    ignoreDuringBuilds: true, // 🚀 Skips linting errors
   },
   typescript: {
-    ignoreBuildErrors: true, // 🚀 Ignores TypeScript errors in build
+    ignoreBuildErrors: true, // 🚀 Skips TypeScript errors
+  },
+  experimental: {
+    logging: 'verbose', // 🚀 Enables detailed logs
   },
 };
 
