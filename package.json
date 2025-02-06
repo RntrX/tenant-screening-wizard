@@ -19,7 +19,6 @@
     "autoprefixer": "^10.4.13"
   },
   "devDependencies": {
-    "eslint": "latest",
-    "eslint-config-next": "latest"
+  "vercel": "latest"
   }
 }
