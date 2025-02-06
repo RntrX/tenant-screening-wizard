@@ -20,12 +20,13 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
+          cache: 'npm'
 
       - name: Install Dependencies
         run: npm install
 
       - name: Build Project
-        run: npm run build || true # Ignores build failures
+        run: npm run build
 
   deploy:
     needs: build-and-test
