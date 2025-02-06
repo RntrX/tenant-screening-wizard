@@ -2,14 +2,11 @@
 const nextConfig = {
   reactStrictMode: true,
   eslint: {
-    ignoreDuringBuilds: true, // 🚀 Skips linting errors
+    ignoreDuringBuilds: true, // ✅ Keeps linting from breaking builds
   },
   typescript: {
-    ignoreBuildErrors: true, // 🚀 Skips TypeScript errors
-  },
-  experimental: {
-    logging: 'verbose', // 🚀 Enables detailed logs
-  },
+    ignoreBuildErrors: true, // ✅ Keeps TypeScript errors from breaking builds
+  }
 };
 
 module.exports = nextConfig;
