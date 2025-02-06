@@ -1,14 +1,14 @@
 {
   "name": "tenant-screening-wizard",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "scripts": {
-  "dev": "next dev",
-  "build": "next build",
-  "start": "next start",
-  "lint": "next lint",
-  "test": "echo \"No tests specified\" && exit 0"
-},
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
   "dependencies": {
     "next": "latest",
     "react": "latest",
@@ -19,6 +19,8 @@
     "autoprefixer": "^10.4.13"
   },
   "devDependencies": {
-  "vercel": "latest"
+    "vercel": "latest",
+    "eslint": "latest",
+    "eslint-config-next": "latest"
   }
 }
