@@ -11,6 +11,7 @@ on:
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
@@ -24,11 +25,12 @@ jobs:
         run: npm install
 
       - name: Build Project
-        run: npm run build || true  # Ignores build failures
+        run: npm run build || true # Ignores build failures
 
   deploy:
     needs: build-and-test
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
