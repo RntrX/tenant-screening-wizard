@@ -10,25 +10,30 @@
     "test": "echo \"No tests specified\" && exit 0"
   },
   "dependencies": {
-    "autoprefixer": "^10.4.13",
-    "debug": "^4.4.0",
-    "framer-motion": "^10.2.0",
-    "next": "latest",
+    "are-we-there-yet": "^4.0.2",
+    "debug": "^4.3.1",
+    "framer-motion": "^12.4.0",
+    "glob": "^9.3.5",
+    "next": "^15.1.6",
     "path-to-regexp": "^8.2.0",
-    "postcss": "^8.4.21",
-    "react": "latest",
-    "react-dom": "latest",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "rimraf": "^4.4.1",
     "semver": "^7.7.1",
-    "tailwindcss": "^3.3.0",
     "tar": "^7.4.3",
-    "undici": "^7.3.0"
+    "undici": "^7.3.0",
+    "uuid": "^11.0.5"
   },
   "devDependencies": {
+    "@types/json-schema": "^7.0.15",
     "@types/node": "^22.13.1",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
+    "autoprefixer": "^10.4.20",
     "eslint": "latest",
     "eslint-config-next": "latest",
+    "postcss": "^8.5.1",
+    "tailwindcss": "^4.0.4",
     "typescript": "^5.7.3",
     "vercel": "^32.3.0"
   }

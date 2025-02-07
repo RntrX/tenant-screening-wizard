@@ -1,0 +1,24 @@
+.
+├── .github
+│   └── workflows
+│       └── deploy.yml
+├── .gitignore
+├── README.md
+├── components
+│   └── ui
+│       ├── button.tsx
+│       ├── card.tsx
+│       ├── input.tsx
+│       ├── label.tsx
+│       └── progress.tsx
+├── list-structure.sh
+├── next-env.d.ts
+├── next.config.js
+├── package-lock.json
+├── package.json
+├── pages
+│   └── index.tsx
+├── project-structure.txt
+└── tsconfig.json
+
+5 directories, 16 files
