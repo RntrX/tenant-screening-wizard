@@ -14,5 +14,3 @@ export function Button({ variant = "primary", className = "", ...props }: Button
 
   return <button className={`${baseClasses} ${variantClasses[variant]} ${className}`} {...props} />;
 }
-
-export default Button;
