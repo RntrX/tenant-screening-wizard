@@ -1,7 +1,7 @@
 import React from "react";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "primary" | "outline" | "secondary"; // Define available variants
+  variant?: "primary" | "outline" | "secondary";
 }
 
 export function Button({ variant = "primary", className = "", ...props }: ButtonProps) {
@@ -14,3 +14,5 @@ export function Button({ variant = "primary", className = "", ...props }: Button
 
   return <button className={`${baseClasses} ${variantClasses[variant]} ${className}`} {...props} />;
 }
+
+export default Button;

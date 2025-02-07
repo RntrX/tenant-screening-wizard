@@ -2,8 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
   experimental: { appDir: true },
-  output: 'export', // Ensures Vercel can detect static output
-  distDir: 'out',   // Tells Next.js where to put build files
+  output: "export",
+  distDir: "out",
 };
 
 module.exports = nextConfig;

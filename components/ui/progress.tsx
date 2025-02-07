@@ -1,16 +1,18 @@
 import React from "react";
 
-interface ProgressProps extends React.HTMLAttributes<HTMLDivElement> {
+interface ProgressProps {
   value: number;
 }
 
-export function Progress({ value, className, ...props }: ProgressProps) {
+export function Progress({ value }: ProgressProps) {
   return (
-    <div className={`relative w-full bg-gray-300 rounded-full ${className}`} {...props}>
+    <div className="relative w-full h-2 bg-gray-300 rounded-full">
       <div
-        className="h-full bg-blue-500 rounded-full transition-all"
+        className="absolute top-0 left-0 h-full bg-blue-500 rounded-full"
         style={{ width: `${value}%` }}
       />
     </div>
   );
 }
+
+export default Progress;

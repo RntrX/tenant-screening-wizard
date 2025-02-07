@@ -1,5 +1,9 @@
 import React from "react";
 
-export function Textarea(props: React.TextareaHTMLAttributes<HTMLTextAreaElement>) {
-  return <textarea {...props} className="p-2 border rounded-md w-full" />;
+interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {}
+
+export function Textarea({ className = "", ...props }: TextareaProps) {
+  return <textarea className={`border border-gray-300 rounded-md p-2 w-full ${className}`} {...props} />;
 }
+
+export default Textarea;
